@@ -47,6 +47,12 @@ label.lg{font-size:12.5px;color:var(--dim);display:inline-flex;align-items:cente
 #sum .sh{font-weight:700;color:var(--title);margin:12px 0 4px;padding-top:10px;border-top:1px solid var(--line)}
 #sum .sh:first-child{margin-top:0;padding-top:0;border-top:0}
 #sum .sl{white-space:pre-wrap;word-break:break-word;min-height:1.2em}
+#gist{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;user-select:text}
+#gist .sh{font-weight:700;color:var(--title);margin:12px 0 4px;padding-top:10px;border-top:1px solid var(--line)}
+#gist .sh:first-child{margin-top:0;padding-top:0;border-top:0}
+#gist .g{display:grid;grid-template-columns:44px 1fr;gap:0 8px;padding:5px 0}
+#gist .g .t{color:var(--faint);font-size:12px;font-variant-numeric:tabular-nums;padding-top:3px}
+#gist .g .x{white-space:pre-wrap;word-break:break-word}
 #latest{position:fixed;right:14px;bottom:14px}
 #toast{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);background:#1F2D3A;color:#fff;border-radius:16px;
   padding:6px 14px;font-size:13px;max-width:90%}
@@ -59,7 +65,7 @@ label.lg{font-size:12.5px;color:var(--dim);display:inline-flex;align-items:cente
     <button class="btn icon" id="reload">&#8635;</button></div>
   <div class="hint hidden" id="hint"></div>
   <div class="bar" id="bar">
-    <div class="seg" id="tabs"><button data-tab="cap" data-t="tab_cap"></button><button data-tab="sum" data-t="tab_sum"></button></div>
+    <div class="seg" id="tabs"><button data-tab="cap" data-t="tab_cap"></button><button data-tab="gist" data-t="tab_gist"></button><button data-tab="sum" data-t="tab_sum"></button></div>
     <label class="lg hidden" id="langBox"><span data-t="lang"></span><select id="lang"></select></label>
     <div class="seg hidden" id="modes"><button data-mode="both" data-t="mode_both"></button><button data-mode="tronly" data-t="mode_tr"></button></div>
     <button class="btn" id="copy" data-t="copy"></button>
@@ -69,9 +75,10 @@ label.lg{font-size:12.5px;color:var(--dim);display:inline-flex;align-items:cente
 <div id="scroll">
   <div id="err" class="hidden"><div id="errText"></div></div>
   <section id="capView"><div id="rows"></div><div class="empty" id="capEmpty"></div></section>
+  <section id="gistView" class="hidden"><div id="gist" class="hidden"></div><div class="empty hidden" id="gistEmpty"></div></section>
   <section id="sumView" class="hidden"><div id="sum" class="hidden"></div><div class="empty hidden" id="sumEmpty"></div></section>
 </div>
 <button class="btn primary hidden" id="latest" data-t="latest"></button>
 <div id="toast" class="hidden"></div>
-<script src="panel.js?v=5866d50b12"></script>
+<script src="panel.js?v=878d323e3a"></script>
 </body></html>
