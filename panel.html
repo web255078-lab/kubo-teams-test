@@ -15,6 +15,7 @@ html:lang(ko) body{font-family:"Malgun Gothic","Segoe UI",system-ui,sans-serif}
 header{flex:none;background:var(--card);border-bottom:1px solid var(--line);padding:8px 10px}
 .st{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;min-height:26px}
 .st #status{flex:1;min-width:0}
+#fold{padding:2px 8px;font-size:12px;font-weight:400;white-space:nowrap}
 .dot{width:9px;height:9px;border-radius:50%;background:var(--faint);flex:none}
 .dot.live{background:var(--ok)}.dot.stopped,.dot.retry{background:var(--warn)}.dot.error{background:var(--bad)}.dot.ended{background:var(--faint)}
 .dot.wait{background:var(--accent);animation:pulse 1s ease-in-out infinite alternate}
@@ -62,6 +63,7 @@ label.lg{font-size:12.5px;color:var(--dim);display:inline-flex;align-items:cente
 <header>
   <div class="st"><span class="dot wait" id="dot"></span><span id="status"></span>
     <button class="btn hidden" id="retry" data-t="reconnect"></button>
+    <button class="btn hidden" id="fold"></button>
     <button class="btn icon" id="reload">&#8635;</button></div>
   <div class="hint hidden" id="hint"></div>
   <div class="bar" id="bar">
@@ -80,5 +82,5 @@ label.lg{font-size:12.5px;color:var(--dim);display:inline-flex;align-items:cente
 </div>
 <button class="btn primary hidden" id="latest" data-t="latest"></button>
 <div id="toast" class="hidden"></div>
-<script src="panel.js?v=0dc531993b"></script>
+<script src="panel.js?v=19c1397413"></script>
 </body></html>
